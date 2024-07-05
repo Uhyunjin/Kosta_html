@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style type="text/css">
+	li{
+		list-style: none;	
+		float: left;
+		/*background: pink;*/
+		/*margin: 10px;*/
+		padding: 10px;
+	}
+	li:nth-child(2n){
+		background-color: steelblue;
+	}
+	li:nth-child(2n+1){
+		background-color: cadetblue;
+	}
+	li:first-child{
+		border-radius: 15px 0 0 15px;
+	}
+	li:last-child{
+		border-radius: 0 15px 15px 0;
+	}
+</style>
+</head>
+<body>
+	<ul>
+		<li>첫번째</li>
+		<li>두번째</li>
+		<li>세번째</li>
+		<li>네번째</li>
+		<li>다섯번째</li>
+		<li>여섯번째</li>
+		<li>일곱번째</li>
+	</ul>
+</body>
+</html>

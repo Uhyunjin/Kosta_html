@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style type="text/css">
+	#header{
+		background: pink;
+		color: white;
+		width: 800px;
+		margin: 0 auto; /*가로로 왼쪽에서부터 배치하기*/
+	}
+	#wrap{
+		width: 800px;
+		background: skyblue;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	#aside{
+		width: 30%;
+		background : darkseagreen;
+		float: left;
+		
+	}
+	#content{
+		width: 70%; /*자식 노드의 크기는 고정된 값을 설정하기 보다는 비율을 설정하는것이 좋다*/
+					/*이 비율은 부모컨테이너를 100으로 보고 설정하는 것*/
+		background : mediumpurple;
+		float: left;
+	}
+</style>
+</head>
+<body>
+	<div id="header">
+		<h1>Header 태그</h1>
+	</div>
+	<div id="wrap">
+		<div id="aside">
+			<h1>aside 태그</h1>
+		</div>
+		<div id="content">
+			<h1>content 태그</h1>
+		</div>
+	</div>
+</body>
+</html>

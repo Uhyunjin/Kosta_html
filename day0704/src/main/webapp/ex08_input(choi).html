@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>다양한 입력 양식</h2>
+    <form action="ex08_inputOK.jsp" method="post">
+        이름 : <input type="text" name="name" id=""> <br>
+        주소 : <input type="text" name="addr" id="" value="서울시 종로구 관철동 1204"> <br>
+        나이 : <input type="number" name="age" id="" min="10" max="100" value="20"> <br>
+        이메일 : <input type="email" name="email" id=""> <br>
+        <!-- 단순히 모양만 지정하는 것으로 업로드 하려면 별도의 프로그램 코드 필요 -->
+        첨부파일 : <input type="file" name="fname" id=""> <br>
+        비밀번호 : <input type="password" name="pwd" id=""> <br>
+        취미 : 
+        <input type="checkbox" name="hobby" id="" value = "마라톤"> 마라톤
+        <input type="checkbox" name="hobby" id="" value = "수영"> 수영
+        <input type="checkbox" name="hobby" id="" value = "게임"> 게임
+        <input type="checkbox" name="hobby" id="" value = "축구"> 축구
+        <br>
+        성별 : 
+        <input type="radio" name="gender" id="" value = "남"> 남
+        <input type="radio" name="gender" id="" value = "여"> 여
+        <br>
+        혈액형 : <br> 
+        <input type="radio" name="bloodType" value="A"> A
+        <input type="radio" name="bloodType" value="B"> B
+        <input type="radio" name="bloodType" value="O"> O
+        <input type="radio" name="bloodType" value="AB"> AB
+        <br>
+        직업 :
+        <select size = "1" name = "job">
+        	<option value="회사원">회사원</option>
+        	<option value="공무원">공무원</option>
+        	<option value="학생">학생</option>
+        	<option value="주부">주부</option>
+        </select>
+        <br>
+        좋아하는 음식<br>
+        <select size = "3" name = "food">
+        	<option value="한식">한식</option>
+        	<option value="중식">중식</option>
+        	<option value="일식">일식</option>
+        	<option value="양식">양식</option>
+        </select>
+        
+        <br>
+        자기소개 : <br>
+        <textarea name="pro" id="" rows="10" cols="60"></textarea>
+        <br>
+        <input type="submit" value="확인">
+        <input type="reset" value="다시입력">
+    </form>
+</body>
+</html>

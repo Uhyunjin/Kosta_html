@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="ex08_inputOK.jsp" method=post>
+		이름:<input type="text" name="name"><br>
+		주소:<input type="text" name="addr"><br>
+		나이:<input type="number" min=10 max=100 value=20 name="age"><br>	
+		이메일:<input type="email" name="email"><br>
+		비밀번호:<input type="password" name="pwd"><br>
+		취미:
+			<input type="checkbox" name="hobby" value="마라톤">마라톤	
+			<input type="checkbox" name="hobby" value="수영">수영	
+			<input type="checkbox" name="hobby" value="게임">게임	
+			<input type="checkbox" name="hobby" value="축구">축구
+			<br>
+		성별:<input type="radio" name="gender" value="남">남
+			<input type="radio" name="gender" value="여">여
+			<br>
+		혈액형:<input type="radio" name="blood" value="A">A
+			 <input type="radio" name="blood" value="B">B	
+			 <input type="radio" name="blood" value="O">O
+			 <input type="radio" name="blood" value="AB">AB
+			 <br>
+		직업:<select size=1 name="job">
+				<option value="회사원">회사원</option>
+				<option value="공무원">공무원</option>
+				<option value="학생">학생</option>
+				<option value="주부">주부</option>
+			</select>
+			<br>
+		음식:<select size=3 name="food">
+				<option value="한식">한식</option>
+				<option value="양식">양식</option>
+				<option value="일식">일식</option>
+				<option value="중식">중식</option>
+			</select>
+			<br>
+		자기소개:<br><textarea rows="10" cols="60"></textarea>
+		<input type="submit">
+	</form>
+</body>
+</html>
