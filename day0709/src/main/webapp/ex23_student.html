@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function cal(){
+		var kor=eval(document.getElementById("kor").value)
+		var eng=eval(document.getElementById("eng").value)
+		var math=eval(document.getElementById("math").value)
+		
+		var sum=kor+eng+math
+		document.getElementById("sum").innerHTML=sum
+		var avg=sum/3
+		document.getElementById("avg").innerHTML=avg
+		var grade=""
+		if(avg>=90){
+			grade="A"
+		}else if(avg>=80){
+			grade="B"
+		}else if(avg>=70){
+			grade="C"
+		}else if(avg>=60){
+			grade="D"
+		}else{grade="E"}
+		
+		document.getElementById("grade").innerHTML=grade
+	}
+</script>
+</head>
+<body>
+<!-- 이름 국어 영어 수학을 입력받아
+	 총점과 평균을 구하여 출력하고
+	 평균에 따라 ABCDE를 판별하여
+	 출력하도록하는 프로그램을 작성 -->
+<h2>성적표</h2>
+<label>국어</label>
+<input type="text" id="kor">
+<br>
+<label>영어</label>
+<input type="text" id="eng">
+<br>
+<label>수학</label>
+<input type="text" id="math">
+<br>
+<button onclick="cal()">계산하기</button><br>
+<hr>
+<label>총점</label> <span id="sum"></span><br>
+<label>평균</label> <span id="avg"></span><br>
+<label>등급</label> <span id="grade"></span><br>
+<br>
+</body>
+</html>

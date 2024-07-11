@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload=function(){
+	
+		let trs=document.getElementsByTagName("tr");
+
+		function clearTr(){
+			for(key in trs){
+				trs[key].style.backgroud="white";
+				tr.setAttribute("check",0);	
+			}
+		}
+		
+		for(let key in trs){
+			tr[key].setAttribute("check",0)
+			
+			trs[key].onmouseover=function(){
+				if(this.getAttribute("check")!=1){					
+					this.style.background="pink"
+				}
+			}
+			trs[key].onmouseleave=function(){
+				if(this.getAttribute("check")!=1){					
+					this.style.background="pink"
+				}
+			}
+			trs[key].onclick=function(){
+				clearTr();
+				this.style.backgroud="red"
+				tr.setAttribute("check",1);	
+			}
+		}
+		
+	}	
+</script>
+</head>
+<body>
+<table border="1" width="50%">
+<thead>
+	<tr>
+		<th>name</th>
+		<th>kor</th>
+		<th>eng</th>
+		<th>math</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td>spring</td>
+		<td>100</td>
+		<td>70</td>
+		<td>60</td>
+	</tr>
+	<tr>
+		<td>summer</td>
+		<td>100</td>
+		<td>70</td>
+		<td>60</td>
+	</tr>
+	<tr>
+		<td>autumn</td>
+		<td>100</td>
+		<td>70</td>
+		<td>60</td>
+	</tr>
+	<tr>
+		<td>winter</td>
+		<td>100</td>
+		<td>70</td>
+		<td>60</td>
+	</tr>
+</tbody>
+</table>
+
+</body>
+</html>

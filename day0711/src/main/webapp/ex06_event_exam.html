@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload=function(){
+		
+		let trs=document.getElementsByTagName("tr");
+		for(let key in trs){
+			trs[key].onmouseover=function(){
+				this.style.background="pink"
+				console.log(this);
+			}
+			trs[key].onmouseleave=function(){
+				this.style.background="white"
+			}
+		}
+		
+	}	
+</script>
+</head>
+<body>
+<table border="1" width="50%">
+	<tr>
+		<th>name</th>
+		<th>kor</th>
+		<th>eng</th>
+		<th>math</th>
+	</tr>
+	<tr>
+		<td>spring</td>
+		<td>100</td>
+		<td>70</td>
+		<td>60</td>
+	</tr>
+	<tr>
+		<td>summer</td>
+		<td>100</td>
+		<td>70</td>
+		<td>60</td>
+	</tr>
+	<tr>
+		<td>autumn</td>
+		<td>100</td>
+		<td>70</td>
+		<td>60</td>
+	</tr>
+	<tr>
+		<td>winter</td>
+		<td>100</td>
+		<td>70</td>
+		<td>60</td>
+	</tr>
+</table>
+</body>
+</html>

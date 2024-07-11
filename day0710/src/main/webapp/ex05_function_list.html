@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript" src="function.js">
+</script>
+<script type="text/javascript">
+	let member=["spring","summer","autumn","winter"];
+	window.onload=function(){
+		let btnList=document.getElementById("btnList");
+		btnList.onclick=function(){	
+			document.getElementById("member").innerHTML=printList(member);
+		}
+	}
+</script>
+</head>
+<body>
+<h2>회원 목록</h2>
+<hr>
+<div id="member"></div>
+<button id="btnList">회원목록출력</button>
+</body>
+</html>

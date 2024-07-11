@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload= function(){
+					
+		document.getElementById("add").onclick=function(){
+			
+			alert("OK")
+			let tr=document.createElement("tr");
+			let input = document.querySelectorAll("input");
+			
+			for(i=0;i<input.length;i++){
+				let txt=document.createTextNode(input[i].value)
+				let td=document.createElement("td")
+				td.appendChild(txt)
+				tr.appendChild(td)
+			}
+			
+			document.querySelector("#student").appendChild(tr)
+				
+		}
+		
+		let trs=document.getElementsByTagName("tr");
+
+		function clearTr(){
+			for(let key in trs){
+				this.style.background="white";
+				this.setAttribute("check",0);	
+			}
+		}
+		
+		for(let key in trs){
+			trs[key].setAttribute("check",0);
+			
+			trs[key].onmouseover=function(){
+				if(this.getAttribute("check")!=1){					
+					this.style.background="pink"
+				}
+			}
+			trs[key].onmouseleave=function(){
+				if(this.getAttribute("check")!=1){					
+					this.style.background="white"
+				}
+			}
+			trs[key].onclick=function(){
+				clearTr();
+				this.style.background="red"
+				trs[key].setAttribute("check",1);	
+			}
+		}
+		
+	}
+</script>
+</head>
+<body>
+	name : <input type="text" id="name"><br>
+	kor : <input type="text" id="kor"><br>
+	eng : <input type="text" id="eng"><br>
+	math : <input type="text" id="math"><br>
+	<button id="add">추가</button>
+	<hr>
+	<table border="1" width="50%">
+		<thead>
+			<tr>
+				<th>name</th>
+				<th>kor</th>
+				<th>eng</th>
+				<th>math</th>
+			</tr>
+		</thead>
+		<tbody id="student">
+			<tr>
+				<td>spring</td>
+				<td>100</td>
+				<td>70</td>
+				<td>60</td>
+			</tr>
+			<tr>
+				<td>summer</td>
+				<td>100</td>
+				<td>70</td>
+				<td>60</td>
+			</tr>
+			<tr>
+				<td>autumn</td>
+				<td>100</td>
+				<td>70</td>
+				<td>60</td>
+			</tr>
+			<tr>
+				<td>winter</td>
+				<td>100</td>
+				<td>70</td>
+				<td>60</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>

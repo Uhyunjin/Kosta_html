@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+	let person={
+		name:"홍길동",
+		age:20,
+		addr:"서울시 종로구 관철동"
+	}
+	
+	window.onload=function(){
+		var str="<table border='1' width='80%'>"
+			str+="<tr>"
+		for(let key in person){
+			str+="<th>"+key+"</th>"
+		}
+		str+="</tr>"
+		str+="<tr>"
+		for(let key in person){
+			str +="<td>"+person[key]+"</td>"
+		}			
+		str+="</tr>"
+		str+="</table>"
+		
+		document.getElementById("table").innerHTML=str;
+	}
+</script>
+
+<h2>회원의 정보</h2>
+<div id="table"></div>
+
+</body>
+</html>

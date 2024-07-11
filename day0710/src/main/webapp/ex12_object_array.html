@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+	//json
+	let data=[
+		{name:"spring",age:20,addr:"서울시 종로구"},
+		{name:"summer",age:21,addr:"서울시 강서구"},
+		{name:"autumn",age:22,addr:"인천시 서구"},
+		{name:"winter",age:23,addr:"부산시 중구"},
+		{name:"seoson",age:24,addr:"대전"}
+	]
+	
+	
+	/*
+	for(i=0;i<data.length;i++){
+		let row=data[i];
+		console.log(row) // object가 출력
+		for(let key in row){
+			console.log(row[key]); //object의 요소 하나씩 출력
+		}
+	}
+	*/
+	
+	for(i=0;i<data.length;i++){
+		for(let key in data[i]){
+			console.log(data[i][key]); //object의 요소 하나씩 출력
+		}
+	}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+오늘 날짜 : 
+<span id="year"></span>
+<span id="month"></span>
+<span id="day"></span>
+<span id="hour"></span>
+<span id="min"></span>
+<span id="sec"></span>
+<script type="text/javascript">
+	function pro(){
+		var today=new Date();
+		var year=today.getFullYear()+"년"
+		var month=today.getMonth()+1+"월"
+		var day=today.getDate()+"일"
+		var hour=today.getHours()+"시"
+		var min=today.getMinutes()+"초"
+		var sec=today.getSeconds()+"분"
+		document.getElementById("year").innerHTML=year
+		document.getElementById("month").innerHTML=month
+		document.getElementById("day").innerHTML=day
+		document.getElementById("hour").innerHTML=hour
+		document.getElementById("min").innerHTML=min
+		document.getElementById("sec").innerHTML=sec
+	}
+	setInterval(pro, 1000);
+</script>
+</body>
+</html>

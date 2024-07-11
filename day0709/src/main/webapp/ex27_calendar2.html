@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function pro(){
+		var str="<tr>"
+		for(i=0;i<=30;i++){
+			if(i%7==0){
+				str="<tr><td>"+(i+1)+"</tr></td>"
+			}else{
+				str+="<td>"+(i+1)+"</tr>"
+			}
+		}
+		str += "</tr>"
+		document.getElementById("table").innerHTML=str;
+	}
+</script>
+</head>
+<body>
+<table border="1" id="table"></table>
+<button onclick="pro()">click</button>
+</body>
+</html>

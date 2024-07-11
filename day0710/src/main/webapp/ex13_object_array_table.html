@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript" src="myutil.js">
+	window.onload=function(){
+		let result=makeTableFromObjectArr(data)
+		console.log(result)
+		document.getElementById("table").innerHTML=result
+	}
+</script>
+</head>
+<body>
+<script type="text/javascript">
+	//json
+	let data=[
+		{name:"spring",age:20,addr:"서울시 종로구"},
+		{name:"summer",age:21,addr:"서울시 강서구"},
+		{name:"autumn",age:22,addr:"인천시 서구"},
+		{name:"winter",age:23,addr:"부산시 중구"},
+		{name:"seoson",age:24,addr:"대전"}
+	]
+
+</script>
+<h2>방명록</h2>
+<div id="table"></div>
+</body>
+</html>

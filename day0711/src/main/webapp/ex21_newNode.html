@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function()	{
+		let clear = function(){
+			for(let i=0;i<click.length;i++){
+				click[i].style.background = "white";
+				click[i].setAttribute("check",0);
+			}
+		}
+		
+		let click = document.getElementsByClassName("data");
+		console.log(click);
+		
+		for(let i=0;i<click.length;i++){
+			click[i].setAttribute("check",0);
+			
+			click[i].onmouseover = function(){
+				if(this.getAttribute("check")!=1){
+					this.style.background = "pink";	
+				}
+				
+			}
+			click[i].onmouseleave = function(){
+				if(this.getAttribute("check")!=1){
+					this.style.background = "white";
+				}
+				
+			}
+			click[i].onclick = function(){
+				clear();
+				this.style.background = "red";
+				click[i].setAttribute("check",1);
+			}
+		}
+		
+		document.getElementById("add").onclick = function(){
+			var name = document.querySelector("#name").value;
+			var kor = document.querySelector("#kor").value;
+			var eng = document.querySelector("#eng").value;
+			var math = document.querySelector("#math").value;
+			let data = [name,kor,eng,math];
+			
+			let tr = document.createElement("tr");
+			
+			for(let i=0;i<data.length;i++){
+				let td = document.createElement("td");
+				td.appendChild(document.createTextNode(data[i]));
+				tr.appendChild(td);
+			}
+			
+			document.querySelector("#list").appendChild(tr);
+			
+		}
+	}
+</script>
+</head>
+<body>
+	name : <input type="text" id="name"><br>
+	kor : <input type="text" id="kor"><br>
+	eng : <input type="text" id="eng"><br>
+	math : <input type="text" id="math"><br>
+	<button id="add">Add</button>
+	<hr>
+	<table border="1" width="80%">
+		<thead>
+			<tr>
+				<th>name</th>
+				<th>kor</th>
+				<th>eng</th>
+				<th>math</th>	
+			</tr>
+		</thead>
+		<tbody id="list">
+			<tr class="data"><td>chris</td><td>100</td><td>70</td><td>60</td></tr>
+			<tr class="data"><td>monica</td><td>80</td><td>70</td><td>60</td></tr>
+			<tr class="data"><td>hulk</td><td>100</td><td>77</td><td>60</td></tr>
+			<tr class="data"><td>captain</td><td>89</td><td>99</td><td>55</td></tr>
+			<tr class="data"><td>smile</td><td>23</td><td>54</td><td>56</td></tr>
+		</tbody>
+	</table>
+</body>
+</html>

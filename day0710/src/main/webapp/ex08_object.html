@@ -1,0 +1,35 @@
+key<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+/*
+	let data =["홍길동",20,"서울시 종로구 관철동"];
+	
+	alert(data[0])
+	alert(data[1])
+	alert(data[2])
+	
+	alert(typeof(data)) // object
+*/
+
+	//json
+	let data={
+		name:"홍길동",
+		age:20,
+		addr:"서울시 종로구 관철동"
+	}
+	
+	//alert(data.name);
+	//alert(data['name']);
+
+	let key='age';
+	alert(data.key); // undefined
+	alert(data[key]);
+	
+</script>
+</body>
+</html>

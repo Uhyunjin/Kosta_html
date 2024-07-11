@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function pro(){
+		var str="<table border='1'><tr>";
+		for(i=0;i<7;i++){
+			str+="<td>"+(i+1)+"</td>";
+		}
+		str+="</tr></table>";
+	}
+	document.getElementById("table").innerHTML=str;
+	
+</script>
+</head>
+<body>
+<button onclick="pro()">click!</button>
+<div id="table"></div>
+</body>
+</html>

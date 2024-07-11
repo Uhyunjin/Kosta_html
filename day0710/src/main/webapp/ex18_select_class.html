@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload=function(){
+		let members=document.getElementsByClassName("member")
+		alert(members.length) //4
+		
+		/*
+		for(i=0;i<members.length;i++){
+			members[i].style.background="pink"
+		}
+		*/
+		
+		console.log(members[0].item)
+		console.log(members[0].namedItem)
+		
+		for(let key in members){
+			members[key].style.background="pink"
+		}
+	}
+</script>
+</head>
+<body>
+<h1 class="member">spring</h1>
+<h1 class="member">summer</h1>
+<h1 class="member">winter</h1>
+<h1 class="member">autumn</h1>
+<h1>black</h1>
+<h1>white</h1>
+</body>
+</html>

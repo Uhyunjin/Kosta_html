@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	div,p,a{
+		border: solid 1px skyblue;
+		margin: 10px;
+	}
+</style>
+<script type="text/javascript">
+	window.onload = function(){
+		
+		document.querySelector("#btnAdd").addEventListener.onclick=function(){
+			let data='<div id="inner"><p id="p"><a id="a" href="#">great</a></p></div>'
+			documnet.querySelector("#outer").innerHTML+=data;
+		}
+		
+		document.querySelector("#outer").addEventListener("click",function(event){
+			let target = event.target;
+			//부모 노드를 찾아줌
+			
+			while(true){
+				target=target.parentElement;
+				if(target.tagName==="P"){
+					break;
+				}
+			}
+			target.style.background="pink";
+			
+		});
+
+	}
+</script>
+</head>
+<body>
+	<div id="ou	ter">
+		<div id="inner">
+			<p id="p">
+				<a id="a" href="#">great</a>
+			</p>
+		</div>
+		<div id="inner">
+			<p id="p">
+				<a id="a" href="#">great</a>
+			</p>
+		</div>
+	</div>
+	<button id="btnAdd">ADD</button>
+</body>
+</html>

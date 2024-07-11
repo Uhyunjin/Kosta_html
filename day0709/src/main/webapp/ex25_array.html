@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var data=["spring","summer","autumn","winter"]	
+	function pro(){
+		var str="<ul>"
+		for(i=0;i<data.length;i++){			
+			str+="<li>"+data[i]+"</li>"
+		}
+		str+="</ul>"
+		document.getElementById("list").innerHTML=str
+	}
+</script>
+</head>
+<body>
+	<h2>수박씨네</h2>
+	<div id="list"></div>
+	<button onclick="pro()">출력하기</button>
+</body>
+</html>

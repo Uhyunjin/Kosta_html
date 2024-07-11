@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let add=function(arr,k){
+			let tot=0;
+			for(i=0;i<arr.length;i++){
+				tot+=arr[i]
+			}
+			alert("배열의 총 합 : "+tot)
+			k();
+		}
+		let data=[10,20,30,40,50]
+		add(data,function(){
+			alert("작업완료");
+		});
+	</script>
+</body>
+</html>

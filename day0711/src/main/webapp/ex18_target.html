@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style type="text/css">
+	div,a,p{
+		border:solid 1px pink;
+		margin: 10px;
+	}
+</style>
+<script type="text/javascript">
+	window.onload=function(){
+		document.querySelector("#outer").addEventListener("click",function(event){
+			let target=event.target
+			alert(target.tagName);
+			// 부모 노드에 이벤트를 걸어놓으면 어떤 자식에게 이벤트가 발생했는지 알 수 있다.
+		})
+	}
+</script>
+</head>
+<body>
+	<div id="outer">
+		<div id="inner">
+			<p id="p">
+				<a id="a" href="#">Hello</a>
+			</p>
+		</div>
+	</div>
+</body>
+</html>

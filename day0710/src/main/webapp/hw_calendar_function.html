@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+		var today=new Date()
+		var year=today.getFullYear()
+		var month=today.getMonth()
+		
+	function printCalendar(year,month){
+			
+		var startDate = new Date(year, month, 1);
+		//제대로 된 달력을 출력하기 위해
+		//이번달 1일의 요일을 알아내고
+		//그 만큼 빈칸을 출력한 다음 날짜를 출력
+		var day = startDate.getDay();		
+		
+		//이번달의 마지막 날
+		var endDate=new Date(year,month+1,0)
+		var last=endDate.getDate();
+		
+		var str = "<h3>";
+		str += year + "년" + (month+1) + "월";
+		str += "</h3>";
+		
+		str+="<table border='1' width='50%'>"
+		str+="<tr>"
+		str+="<th>일</th>"
+		str+="<th>월</th>"
+		str+="<th>화</th>"
+		str+="<th>수</th>"
+		str+="<th>목</th>"
+		str+="<th>금</th>"
+		str+="<th>토</th>"
+		str+="</tr>"
+		str += "<tr>";
+		
+		for(j=1;j<=day; j++){
+			str += "<td>&nbsp;</td>";
+		}
+		
+		for(i=1; i<=last; i++){
+			str += "<td>"+i+"</td>";
+			if( (i+day) % 7 == 0){
+				str += "</tr><tr>";
+			}
+		}
+		str += "</tr>";
+		str += "</table>";
+		document.getElementById("calendar").innerHTML = str;
+		}
+		
+		window.onload=function(){	//윈도우의 모든 html문서를 다 읽어온 후에 실행해라
+			printCalendar(year,month);
+			let next=document.getElementById("next");
+			
+			// next 버튼 클릭
+			next.onclick=function(){
+				month+=1
+				if(month>=12){
+					year+=1
+					month=0
+				}
+				printCalendar(year,month)
+			}
+			
+			// prev 버튼 클릭
+			prev.onclick=function(){
+				month-=1
+				if(month<=-1){
+					year-=1
+					month=11
+				}
+				printCalendar(year,month)
+			}
+		}
+</script>
+</head>
+<body>
+	<div id="calendar"></div>
+	<button id="prev">◀</button>
+	<button id="next">▶</button>
+	<hr>
+</body>
+</html>
