@@ -27,6 +27,19 @@ public class DetailCustomer extends HttpServlet {
 		response.setContentType("text/html; charset=UTF-8");
 		PrintWriter out = response.getWriter();
 		String data="<html>";
+		data+="<head>";
+		data+="<script type='text/javascript'>";
+		data+="window.onload=function(){";
+		data+="document.querySelector('#delete_button').onclick=function(event){";		
+		data+="let re=confirm('정말로 삭제하시겠습니까?');";		
+		data+="if(re==false){";		
+		data+="event.preventDefault();";		
+		data+="return false;";		
+		data+="}";		
+		data+="}";		
+		data+="}";		
+		data+="</script>";
+		data+="</head>";
 		data+="<body>";
 		
 		
@@ -67,7 +80,7 @@ public class DetailCustomer extends HttpServlet {
 		data+="<br>";
 		data+="<br>";
 		data+="<a href='UpdateCustomer?custid="+custid+"'>수정하기</a>";
-		data+="<a href='DeleteCustomer?custid="+custid+"'>삭제하기</a>";
+		data+="<a id='delete_button' href='DeleteCustomer?custid="+custid+"'>삭제하기</a>";
 		
 		
 		data+="</body>";

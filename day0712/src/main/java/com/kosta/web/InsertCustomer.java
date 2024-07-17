@@ -25,7 +25,7 @@ public class InsertCustomer extends HttpServlet {
 		data+="고객 주소: <input type='text' name='addr'><br>";
 		data+="고객 전화: <input type='text' name='phone'><br>";
 		data+="<input type='submit' value='등록'><br>";
-		data+="<input type='reset' value='phone'><br>";
+		data+="<input type='reset' value='초기화'><br>";
 		data+="</form>";
 		data+="</body>";
 		data+="</html>";

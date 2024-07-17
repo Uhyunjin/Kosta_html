@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	window.onload = function(){
+		
+		function checkDelete(custid){
+			let re=confirm("정말로 삭제할까요?");
+			if(re==false){
+				alert("취소~!");
+				event.preventDefault();
+				return false;			
+			}
+			
+		}
+	}
+</script>
+</head>
+<body>
+	<a href="deleteOK.jsp?custid=100" onclick="checkDelete()">삭제</a>
+</body>
+</html>

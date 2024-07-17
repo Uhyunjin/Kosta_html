@@ -1,0 +1,8 @@
+테이블 생ㅇ성시에 설정할 수 있는 제약의 종류
+1. primary key : unique+not null
+2.not null : null값이 올 수 없다
+3.unique :  겹치는 값이 올 수 없다
+4. default : 입력되지 않았을 때 기본값을 설정할 수 있다.
+5. check : 값을 제한할 수 있다
+6. foreign key : 
+7. 
